@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shikimori-animego-merge-list"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests == 2.28.1", "beautifulsoup4 == 4.11.1"]
+dynamic = ["version"]
+
+  [project.optional-dependencies]
+  dev = ["pylint == 2.14.0", "autopep8 == 1.7.0"]
+
+
+[tool]
+  [tool.isort]
+  profile = 'hug'
+  line_length = 140
+
+  [tool.autopep8]
+  max-line-length = 140
+  indent-size = 2
+  aggressive = 3
+
+  [tool.pylint.MASTER]
+  max-line-length = 140
+  indent-string='  '
+  ignore = "shikimori-animego-merge-list.egg-info"
+
+  [tool.pylint."MESSAGEG CONTROL"]
+  disable = [
+    "bad-option-value",
+    "unknown-option-value",
+    "useless-option-value",
+    "redefined-outer-name",
+    "bad-continuation",
+    "logging-format-interpolation",
+    "logging-fstring-interpolation",
+    "logging-not-lazy",
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "unspecified-encoding",
+    "no-self-use",
+    "too-many-arguments",
+    "too-many-local-variables",
+    "too-few-public-methods",
+]
+
+
+  [tool.setuptools.packages.find]
+  where = ["shikimori-animego-merge-list"]
+  exclude = ["resources"]
+
+#   [tool.coverage.run]
+#   source = ["hikimore-animego-merge-list"]
+#   omit = ["*__init__.py"]
+
+#   [tool.pytest.ini_options]
+#   addopts = "-n 4 --dist loadscope"
+  # addopts = "--cov--cov-fail-under 95"
+#   testpaths = ["tests"]
+#   pythonpath = ["hikimore-animego-merge-list"]

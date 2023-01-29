@@ -1,41 +1,24 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/alpine
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
-	"name": "Alpine",
+	"name": "Python 3",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick an Alpine version: 3.13, 3.14, 3.15, 3.16
-		"args": {
-			"VARIANT": "3.16"
-		}
 	},
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Set *default* container specific settings.json values on container create.
-			"settings": {
-				"editor.formatOnSave": true,
-				"python.defaultInterpreterPath": "/usr/bin/python3",
-				"python.languageServer": "Pylance",
-				"python.linting.enabled": true,
-				"python.linting.pylintEnabled": true,
-				"python.formatting.autopep8Path": "/home/vscode/.local/bin/autopep8",
-				"python.linting.pylintPath": "/home/vscode/.local/bin/pylint"
-			},
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"bungcip.better-toml"
-			]
-		}
-	},
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
+
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install --editable .[dev]",
-	// Replace when using a ptrace-based debugger like C++, Go, and Rust
-	// "runArgs": [ "--init", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"postCreateCommand": "pip3 install --editable .[dev]",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }

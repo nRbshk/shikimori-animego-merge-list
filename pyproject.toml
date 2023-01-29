@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "shikimori-animego-merge-list"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["requests == 2.28.1", "beautifulsoup4 == 4.11.1"]
+dependencies = ["requests == 2.28.1", "beautifulsoup4 == 4.11.1", "selenium == 4.8.0" ]
 dynamic = ["version"]
 
   [project.optional-dependencies]

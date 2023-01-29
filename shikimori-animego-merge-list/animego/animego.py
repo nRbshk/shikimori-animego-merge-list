@@ -17,11 +17,11 @@ def parseListContent(contentElements: list[WebElement]) -> list[AnimeItem]:
     name = cont.find_element(By.XPATH, 'td[2]/div').text
     status = cont.find_element(By.XPATH, 'td[3]/a').get_attribute("data-title")
     episodes = cont.find_element(By.XPATH, 'td[5]').text
-    data.append(AnimeItem(name, russianName, status, episodes))
+    data.append(AnimeItem(name, russianName, episodes, None, status))
   return data
 
 
-def receiveItems(user):
+def receiveItems(user) -> list[AnimeItem]:
   user = "siel_die"
   base_url = f'https://animego.org/user/{user}/mylist/anime'
   wrapper.driver.get(base_url)
@@ -31,9 +31,6 @@ def receiveItems(user):
     items = loaded_items
     wrapper.scrollToEnd()
     loaded_items = getListContents()
-    break
 
-  anime_items = parseListContent(loaded_items)
-  for item in anime_items:
-    item = item.asJSON()
-  return anime_items
+  return parseListContent(loaded_items)
+  

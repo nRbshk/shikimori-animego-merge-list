@@ -1,0 +1,1 @@
+from .shikimori import collectShikimoriAnime, SHIKIMORI_URL_API

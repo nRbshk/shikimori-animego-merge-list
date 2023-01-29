@@ -1,1 +1,1 @@
-from .animego import receiveItems
+from .animego import collectByUser, collectAnime

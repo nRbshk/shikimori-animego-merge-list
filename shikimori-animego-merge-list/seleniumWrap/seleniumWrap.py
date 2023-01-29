@@ -8,8 +8,8 @@ class SeleniumWrap:
     self.driver = self.__createWebdriver()
 
   def scrollToEnd(self):
-    self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    sleep(0.44)
+    self.driver.execute_script("window.scrollTo(window.scrollY, document.body.scrollHeight);")
+    sleep(0.7)
 
   def __setupChromeOptions(self):
     chrome_options = Options()
@@ -21,8 +21,3 @@ class SeleniumWrap:
 
   def __createWebdriver(self):
     return webdriver.Chrome(options=self.__setupChromeOptions())
-
-
-
-
-

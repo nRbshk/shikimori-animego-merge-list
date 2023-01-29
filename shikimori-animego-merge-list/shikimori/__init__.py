@@ -1,1 +1,1 @@
-from .shikimori import collectShikimoriAnime, SHIKIMORI_URL_API
+from .shikimori import collectShikimoriAnime, collectByUser

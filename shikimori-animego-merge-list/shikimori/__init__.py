@@ -1,1 +1,1 @@
-from .shikimori import collectShikimoriAnime, collectByUser
+from .shikimori import collectAll, collectByUser

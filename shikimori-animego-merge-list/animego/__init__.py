@@ -1,1 +1,1 @@
-from .animego import collectByUser, collectAnime
+from .animego import collectByUser, collectAll

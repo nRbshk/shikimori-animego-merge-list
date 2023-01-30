@@ -8,7 +8,7 @@ HEADERS = {
 }
 
 
-def collectShikimoriAnime(url: str = SHIKIMORI_URL_API) -> list[AnimeItem]:
+def collectAll(url: str = SHIKIMORI_URL_API) -> list[AnimeItem]:
   shikimori_anime: list[AnimeItem] = []
   while True:
     page_index = (len(shikimori_anime) // 50) + 1

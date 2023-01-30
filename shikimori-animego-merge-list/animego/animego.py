@@ -8,7 +8,7 @@ wrapper = SeleniumWrap()
 ANIMEGO_BASE_URL = 'https://animego.org/anime'
 
 
-def collectAnime(url: str = ANIMEGO_BASE_URL):
+def collectAll(url: str = ANIMEGO_BASE_URL):
   def getContent():
     return wrapper.driver.find_elements(By.XPATH, '//*[@id="anime-list-container"]/div')
   wrapper.driver.get(url)

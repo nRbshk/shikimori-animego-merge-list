@@ -5,7 +5,6 @@ from utility.animeItem import AnimeItem
 from typing import Callable
 from utility import groupBy, withLeading, jsonWrap
 
-
 class Converter:
   _instance = None
   TARGET_TYPE = 'Anime'

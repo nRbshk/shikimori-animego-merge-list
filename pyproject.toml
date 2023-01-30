@@ -7,7 +7,7 @@ name = "shikimori-animego-merge-list"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["requests == 2.28.1", "beautifulsoup4 == 4.11.1", "selenium == 4.8.0" ]
-dynamic = ["version"]
+version = "0.1.0"
 
   [project.optional-dependencies]
   dev = ["pylint == 2.14.0", "autopep8 == 1.7.0"]
@@ -50,15 +50,5 @@ dynamic = ["version"]
 
 
   [tool.setuptools.packages.find]
-  where = ["shikimori-animego-merge-list"]
+  where = ["src"]
   exclude = ["resources"]
-
-#   [tool.coverage.run]
-#   source = ["hikimore-animego-merge-list"]
-#   omit = ["*__init__.py"]
-
-#   [tool.pytest.ini_options]
-#   addopts = "-n 4 --dist loadscope"
-  # addopts = "--cov--cov-fail-under 95"
-#   testpaths = ["tests"]
-#   pythonpath = ["hikimore-animego-merge-list"]
